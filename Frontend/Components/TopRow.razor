@@ -1,0 +1,35 @@
+<div class="d-flex justify-content-between align-items-center top-row px-4">
+    <div class="fs-3 d-flex">
+        <icon-button>
+            <span class="material-symbols-outlined">shelves</span>
+            <span class="ms-1">BookStack</span>
+        </icon-button>
+    </div>
+    <div class="fs-5 d-flex">
+        <InputText @ref="@SearchInputElement" class="search-bar rounded-pill shadow-sm px-3" @bind-Value="@SearchInput" />
+    </div>
+    <div class="d-flex">
+        <IconButton>
+            <Icon><span class="material-symbols-outlined">shelf_position</span></Icon>
+            <Text><span>书架</span></Text>
+        </IconButton>
+        <IconButton>
+            <Icon><span class="material-symbols-outlined">book_5</span></Icon>
+            <Text><span>图书</span></Text>
+        </IconButton>
+        <IconButton>
+            <Icon><span class="material-symbols-outlined">settings</span></Icon>
+            <Text><span>设置</span></Text>
+        </IconButton>
+        <IconButton>
+            <Icon>
+                <picture>
+                    <source srcset="@_userHeadImgUrl"/>
+                    <img src="images/face.svg" alt="默认头像"/>
+                </picture>
+            </Icon>
+            <Text><span class="ms-1">Admin</span></Text>
+            <After><i style="font-size: 0.5em;" class="ms-1 bi bi-caret-down-fill"></i></After>
+        </IconButton>
+    </div>
+</div>
