@@ -1,0 +1,109 @@
+<div class="container d-flex flex-column justify-content-start transition-text-gray">
+    <div class="toolbar-title">操作</div>
+    @if (Types.HasFlag(OperatorTypes.NewPage))
+    {
+        <IconButton>
+            <Icon><i class="bi bi-file-plus"></i></Icon>
+            <Text>新页面</Text>
+        </IconButton>
+    }
+    @if (Types.HasFlag(OperatorTypes.NewSection))
+    {
+        <IconButton>
+            <Icon><i class="bi bi-file-plus"></i></Icon>
+            <Text>新章节</Text>
+        </IconButton>
+    }
+    @if (Types.HasFlag(OperatorTypes.NewPage) || Types.HasFlag(OperatorTypes.NewSection))
+    {
+        <Dividing/>
+    }
+    @if (Types.HasFlag(OperatorTypes.Edit))
+    {
+        <IconButton>
+            <Icon><i class="bi bi-pencil-fill"></i></Icon>
+            <Text><span>编辑</span></Text>
+        </IconButton>
+    }
+    @if (Types.HasFlag(OperatorTypes.Sort))
+    {
+        <IconButton>
+            <Icon><i class="bi bi-filter-left"></i></Icon>
+            <Text>排序</Text>
+        </IconButton>
+    }
+    @if (Types.HasFlag(OperatorTypes.Copy))
+    {
+        <IconButton>
+            <Icon><i class="bi bi-copy"></i></Icon>
+            <Text><span>复制</span></Text>
+        </IconButton>
+    }
+    @if (Types.HasFlag(OperatorTypes.Move))
+    {
+        <IconButton>
+            <Icon><i class="bi bi-folder-fill"></i></Icon>
+            <Text><span>移动</span></Text>
+        </IconButton>
+    }
+    @if (Types.HasFlag(OperatorTypes.Revisions))
+    {
+        <IconButton>
+            <Icon><i class="bi bi-clock-history"></i></Icon>
+            <Text><span>修订历史</span></Text>
+        </IconButton>
+    }
+    @if (Types.HasFlag(OperatorTypes.Permissions))
+    {
+        <IconButton>
+            <Icon><i class="bi bi-shield-lock-fill"></i></Icon>
+            <Text><span>权限</span></Text>
+        </IconButton>
+    }
+    @if (Types.HasFlag(OperatorTypes.Delete))
+    {
+        <IconButton>
+            <Icon><i class="bi bi-trash3-fill"></i></Icon>
+            <Text><span>删除</span></Text>
+        </IconButton>
+    }
+    @if (Types.HasFlag(OperatorTypes.Edit)
+         || Types.HasFlag(OperatorTypes.Sort)
+         || Types.HasFlag(OperatorTypes.Copy) 
+         || Types.HasFlag(OperatorTypes.Move) 
+         || Types.HasFlag(OperatorTypes.Revisions)
+         || Types.HasFlag(OperatorTypes.Permissions) 
+         || Types.HasFlag(OperatorTypes.Delete))
+    {
+        <Dividing />
+    }
+    @if (Types.HasFlag(OperatorTypes.SortBook))
+    {
+        <IconButton>
+            <Icon><i class="bi bi-filter-left"></i></Icon>
+            <Text>排序图书</Text>
+        </IconButton>
+        <Dividing />
+    }
+    @if (Types.HasFlag(OperatorTypes.Follow))
+    {
+        <IconButton>
+            <Icon><i class="bi bi-eye-fill"></i></Icon>
+            <Text>关注</Text>
+        </IconButton>
+    }
+    @if (Types.HasFlag(OperatorTypes.Star))
+    {
+        <IconButton>
+            <Icon><i class="bi bi-star"></i></Icon>
+            <Text>收藏</Text>
+        </IconButton>
+    }
+    @if (Types.HasFlag(OperatorTypes.Export))
+    {
+        <IconButton>
+            <Icon><i class="bi bi-box-arrow-up-right"></i></Icon>
+            <Text>导出</Text>
+        </IconButton>
+    }
+</div>
