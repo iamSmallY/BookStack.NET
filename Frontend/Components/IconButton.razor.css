@@ -1,0 +1,11 @@
+icon-button {
+    display: flex;
+    gap: 0.25em;
+    align-items: center;
+    padding: .5em;
+}
+
+icon-button:hover {
+    background-color: rgba(0,0,0,0.1);
+    cursor: pointer;
+}
