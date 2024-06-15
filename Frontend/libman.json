@@ -1,0 +1,62 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "library": "bootstrap@5.3.2",
+      "destination": "wwwroot/lib/bootstrap",
+      "files": [
+        "css/bootstrap.min.css*",
+        "css/bootstrap.css*",
+        "js/bootstrap.bundle.*"
+      ]
+    },
+    {
+      "library": "bootstrap-icons@1.11.3",
+      "destination": "wwwroot/lib/bootstrap-icons",
+      "files": [
+        "font/**",
+        "bootstrap-icons.svg"
+      ]
+    },
+    {
+      "library": "material-symbols@0.20.0",
+      "destination": "wwwroot/lib/material-symbols",
+      "provider": "unpkg",
+      "files": [
+        "*.css",
+        "*.woff2"
+      ]
+    },
+    {
+      "library": "marked@2.0.3",
+      "destination": "wwwroot/lib/marked/"
+    },
+    {
+      "library": "dompurify@2.2.7",
+      "destination": "wwwroot/lib/dompurify/"
+    },
+    {
+      "library": "github-markdown-css@4.0.0",
+      "destination": "wwwroot/lib/github-markdown-css/"
+    },
+    {
+      "library": "highlight.js@11.0.1",
+      "destination": "wwwroot/lib/highlight.js/",
+      "files": [
+        "highlight.min.js",
+        "styles/default.min.css",
+        "languages/*"
+      ]
+    },
+    {
+      "library": "mathjax@3.2.0",
+      "destination": "wwwroot/lib/mathjax/",
+      "files": [
+        "es5/tex-mml-chtml.js",
+        "es5/tex-mml-chtml.min.js",
+        "es5/output/chtml/fonts/woff-v2/*.woff"
+      ]
+    }
+  ]
+}
