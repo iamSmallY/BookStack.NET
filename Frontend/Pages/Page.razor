@@ -1,0 +1,15 @@
+@page "/Page"
+
+<MainLayout>
+    <LeftContent>
+        <Sidebar />
+    </LeftContent>
+    <MainContent>
+        <MarkdownDisplay 
+            Markdown="@_markdownStr"/>
+    </MainContent>
+    <RightContent>
+        <Information />
+        <Operators Types="@Operators.Page" />
+    </RightContent>
+</MainLayout>

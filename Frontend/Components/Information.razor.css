@@ -1,0 +1,6 @@
+div > div {
+    display: inline-flex;
+    gap: 1rem;
+    font-size: 0.9rem;
+    margin-bottom: 0.25em;
+}
