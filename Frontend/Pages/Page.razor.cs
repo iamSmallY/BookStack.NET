@@ -11,7 +11,7 @@ public partial class Page : ComponentBase
     {
         for (var i = 0; i < 5; ++i)
         {
-            _markdownStr += _markdownStr;
+            _markdownStr += '\n' + _markdownStr;
         }
         base.OnInitialized();
     }

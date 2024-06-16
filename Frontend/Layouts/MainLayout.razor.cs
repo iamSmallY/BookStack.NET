@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Components;
 
-namespace Frontend.Layout;
+namespace Frontend.Layouts;
 
 public partial class MainLayout : ComponentBase
 {
