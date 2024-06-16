@@ -1,26 +1,28 @@
-using System.Text.RegularExpressions;
 using Microsoft.AspNetCore.Components;
 using Microsoft.JSInterop;
 
 namespace Frontend.Components;
 
-public partial class MarkdownDisplay : ComponentBase
+public partial class Markdown : ComponentBase
 {
     private string? _markdownHtml;
+    private IJSObjectReference? _module;
     
-    [Parameter] public string? Markdown { get; set; }
+    [Parameter] public string? MarkdownString { get; set; }
 
     [Inject] public IJSRuntime JsRuntime { get; set; } = default!;
 
     protected override async Task OnParametersSetAsync()
     {
-        if (Markdown is not null)
+        if (MarkdownString is not null)
         {
-            _markdownHtml = await JsRuntime.InvokeAsync<string>("Markdown.ToHtml", Markdown
+            _module = await JsRuntime.InvokeAsync<IJSObjectReference>(
+                "import", "./Components/Markdown.razor.js");
+            _markdownHtml = await _module.InvokeAsync<string>("Markdown.toHtml", MarkdownString
                 .Replace(@"\(", @"\\(").Replace(@"\)", @"\\)")
                 .Replace(@"\[", @"\\[").Replace(@"\]", @"\\]"));
             await InvokeAsync(StateHasChanged);
-            await JsRuntime.InvokeVoidAsync("MathJax.startup.defaultReady");
+            await _module.InvokeVoidAsync("Markdown.renderMathematicalFormulas");
         }
         else
         {
@@ -29,5 +31,4 @@ public partial class MarkdownDisplay : ComponentBase
         
         await base.OnParametersSetAsync();
     }
-    
 }

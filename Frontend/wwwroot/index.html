@@ -76,7 +76,16 @@
 
 <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-<script src="js/Markdown.js"></script>
+<script type="text/javascript">
+    window.MathJax = {
+        tex: {
+            inlineMath: [["$", "$"], ["\\(", "\\)"]]
+        },
+        options: {
+            enableMenu: false
+        }
+    };
+</script>
 <script src="lib/marked/marked.min.js"></script>
 <script src="lib/dompurify/purify.min.js"></script>
 <script src="lib/mathjax/es5/tex-mml-chtml.min.js"></script>
