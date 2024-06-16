@@ -12,7 +12,7 @@ div > * {
     overflow-x: hidden;
     overflow-y: scroll;
     scrollbar-width: none;
-    top: 4.5rem;
+    top: 5.6rem;
     position: sticky;
 }
 
